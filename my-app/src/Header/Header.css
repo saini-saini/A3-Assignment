@@ -1,0 +1,42 @@
+
+.navbutton{
+  margin-left: -40px;
+  
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+
+}
+.fa-solid{
+    margin-top: 17px;
+    margin-right: -85px;
+}
+.navbar{
+    width: 100%;
+    
+   
+}
+.btn-outline-success {
+    background-color: rgb(247, 112, 134);
+    color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    border-color:rgb(247, 112, 134) ;
+}
+.btn-outline-success :hover{
+    background-color: red;
+}
+
+.logo{
+    margin-left: -70px;
+}
+
+.navcartbutton{
+    margin-top: 13px;
+    margin-left: 268px;
+}
+ 
+.hiredesign{
+    margin-right: 16px;
+}

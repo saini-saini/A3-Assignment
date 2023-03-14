@@ -1,0 +1,37 @@
+.login{
+    background-color: rgb(238, 76, 103);
+    color: white;
+    margin-left: 196px;
+    width: 405px;
+    height: 40px;
+    border-color:  rgb(238, 76, 103);
+    border-radius: 7px;
+}
+.ForgetPass{
+  color:  rgb(0, 157, 255); 
+  border: none; 
+  width: 405px;
+  height: 40px;
+  margin-left: 196px;
+  background-color: white;
+
+}
+
+.createAccount{
+    color: white;
+    background-color: rgb(89, 176, 35);
+    height: 40px;
+    border-radius: 7px;
+    border-color: rgb(89, 176, 35) ;
+    width: 200px;
+    margin-left: 180px;
+}
+
+.loginform{
+  margin-top: 20px;
+  margin-left: -182px;
+ 
+}
+
+
+

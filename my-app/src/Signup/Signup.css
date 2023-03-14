@@ -1,0 +1,75 @@
+.heading{
+    margin-left: 161px;
+}
+.form{
+    margin-top: 20px;
+    display: flex;
+    margin-left: 230px;
+}
+
+.TermAndConditions{
+font-size: 12px;
+text-align: left;
+width: 285px;
+}
+
+.protected{
+    font-size: 10px;
+    text-align: left;
+    margin-left: 190px;
+}
+.names{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    margin-left: 203px;
+    
+}
+
+.create{
+    background-color: rgb(238, 76, 103);
+    color: white;
+    margin-left:200px;
+    width: 410px;
+    height: 40px;
+    border-color:  rgb(238, 76, 103);
+    border-radius: 7px;
+}
+.box{
+    background-color: rgba(183, 179, 179, 0.237);
+    border: none;
+}
+.passbox{
+    width: 405px;
+    margin-left: 200px;
+    height: 35px;
+}
+
+.emailbox{
+    width: 405px;
+    margin-left: 200px;
+    height: 35px;
+}
+
+.namebox{
+    height: 35px;
+}
+.value{
+    margin-left: -95px;
+}
+.valueEmail{
+    margin-left: -155px;
+}
+.valuePass{
+    margin-left: -130px;
+}
+
+.check{
+    margin-left: 113px;
+    /* width: 20px; */
+
+}
+
+.items{
+    margin-right: 20px;
+}

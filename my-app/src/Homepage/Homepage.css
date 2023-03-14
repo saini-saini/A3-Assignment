@@ -1,0 +1,56 @@
+.cards{
+    padding: 1rem;
+    width: 17rem;
+    height: 20rem;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 15px; 
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 255, .2);
+   
+    
+}
+
+.grid{
+    max-width: 100rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  
+     gap: 1rem;  
+ } 
+
+
+.title{
+    font-size: 13px;
+    margin-top: 2px;
+   
+}
+.price{
+    font-size: 10px;
+    margin-top: 6px;
+}
+
+.description{
+    font-size: 10px;
+    margin-top: -12px;
+    color: grey; 
+  }
+
+.category{
+    font-size: 10px;
+  
+}
+
+.cardimg{
+   max-height: 94px;
+  
+  
+}
+
+.rating{
+    text-align: left;
+    margin-top: -10px;
+   
+}
+
+
+
