@@ -1,11 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { CreateContext,useEffect, useState } from 'react';
 import Axios from 'axios'
 import './Homepage.css'
 import Rating from "@mui/material/Rating";
 import  Button from  "@mui/material/Button";
+import { useNavigate } from 'react-router-dom'
+import {useSelector,useDispatch} from 'react-redux'
+import { cartActions } from '../redux/actions/actions';
+
 const baseURL = "https://fakestoreapi.com/products";
+
+
+
 function Homepage(Props) {
   const [card, setCards]=useState([]);
+  const dispatch = useDispatch()
+
   useEffect(()=>{
     Axios.get(baseURL).then((result) => {
       setCards(result.data);
@@ -13,16 +22,29 @@ function Homepage(Props) {
       
     
   })
+  const navigate =useNavigate();
   const userData = JSON.parse(localStorage.getItem('userInfo'))
-  const [isLoggedIn, setIsLoggedIn] = useState(userData);
-  const AddItems=(e)=>{
-    e.preventDefault();
-    if (isLoggedIn ==userData ) {
-      console.log('items added to cart');
+  const [Items, setItems] = useState(userData);
+  const data = useSelector((state)=>state.cartReducer)
+  const AddItems=(items)=>{
+    //e.preventDefault();
+    if (userData ) {
+      console.log(card);
+    
+      dispatch(cartActions(items))
+      //console.log(data)
+     // console.log(items)
+     
+
     } else  {
-      console.log('Please login to continue');
-    }
+      navigate('/signin')
+        console.log('Please login to continue');
+      }
   }
+
+  useEffect(()=>{
+    console.log(data)
+  },[data])
   return (
     
       <>
@@ -47,7 +69,7 @@ function Homepage(Props) {
               <p className='description '>  {description}  </p>
                <div className='rating'><Rating name="size-medium" defaultValue={2} /></div>
              
-              <div className='button d-grid mt-1'> <Button name='AddToCart' variant="contained" onClick={AddItems} disable={isLoggedIn ? "true" : "false"} >Add to Cart</Button>  </div>
+              <div className='button d-grid mt-1'> <Button name='AddToCart' variant="contained" onClick={()=>AddItems(items)} disable={Items ? "userData" : "false"} >Add to Cart</Button>  </div>
              
               
             </div>

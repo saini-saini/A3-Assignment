@@ -5,8 +5,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import './Header.css'
 import { useNavigate } from 'react-router-dom'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
 function Header() {
-  const navigate =useNavigate();
+  // const navigate =useNavigate();
   return (
     <div className="navbar">
     <Navbar bg="light" expand="lg">
@@ -16,21 +17,31 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <img  className='logo' src="assets/asset 30.svg" alt="" />
-            <Nav.Link href="#home">Inspiration</Nav.Link>
+            <Nav.Link href="#home"
+            //  onClick={()=>navigate('/')}
+             >Home</Nav.Link>
             <Nav.Link href="#link">Find Work</Nav.Link>
             <Nav.Link href="#link">Learn Design </Nav.Link>
             <Nav.Link href="#link">Go Pro</Nav.Link>
             <Nav.Link href="#link">Design Files</Nav.Link>
             <Nav.Link className='hiredesign' href="#link">Hire Designers</Nav.Link>
-            <span onClick={()=>navigate('/cartitems')} className='navcartcount'>5</span>
-                  <span  onClick={()=>navigate('/cartitems')}  className="navcartbutton">   <AddShoppingCartIcon/></span>
+            <span 
+            // onClick={()=>navigate('/cartitems')}
+             className='navcartcount'>0</span>
+                  <span  
+                  // onClick={()=>navigate('/cartitems')}
+                    className="navcartbutton">   <AddShoppingCartIcon/></span>
             
       
              <div  className="navbutton"><i class="fa-solid fa-magnifying-glass"></i>
 
-<a onClick={()=>navigate('/signin')} class="btn signin"    href="#">Sign in</a>
+<a 
+// onClick={()=>navigate('/signin')}
+ class="btn signin"    href="#">Sign in</a>
 
-<button onClick={()=>navigate('/signup')} class=" btn-outline-success signup  " type="submit">Sign up</button>
+<button 
+// onClick={()=>navigate('/signup')}
+ class=" btn-outline-success signup  " type="submit">Sign up</button>
 </div>
 
           </Nav>

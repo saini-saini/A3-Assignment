@@ -35,15 +35,26 @@
 .loginform{
 margin-top: -1px;
   margin-left: -73px;
- background-image: url("./backimg.jpg");
+ background-image: url("./bgimg.jpg");
  height: 530px; 
+ 
+
+}
+
+.loginUI{
+  border: solid;
+  margin-left: 351px;
+  width: 733px;
+  height: 500px;
+  border-color: white;
 
 }
 
 
+.logincontent{
+  margin-left: -172px;
+}
 
-/* .logincontent{
-  margin-left: 20px;
-  margin-left: 187px;
-} */
-
+.loginheading{
+  margin-top: 20px;
+}

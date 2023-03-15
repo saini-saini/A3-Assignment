@@ -42,11 +42,11 @@ import 'react-toastify/dist/ReactToastify.css';
       <Formik validationSchema={NewValidations}
        initialValues={{email:"",password:""}}
       onSubmit={handleSubmit}>
-        <Form>
+        <Form className='loginUI'>
     
-<div className='loginform'>
+{/* <div className='loginform'> */}
   
-<h3 className='heading '>Sign in to Dribbble</h3> <br />
+<h3 className='loginheading '>Sign in to Dribbble</h3> <br />
 <span className="content">
 
 <div className="logincontent">  
@@ -68,7 +68,7 @@ import 'react-toastify/dist/ReactToastify.css';
         
 </div>
 </span>
-</div>  
+{/* </div>   */}
 <ToastContainer/>
         </Form>
       </Formik>
