@@ -22,18 +22,8 @@ function Header() {
             <Nav.Link href="#link">Go Pro</Nav.Link>
             <Nav.Link href="#link">Design Files</Nav.Link>
             <Nav.Link className='hiredesign' href="#link">Hire Designers</Nav.Link>
-            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
-                  <span className="navcartbutton">   <AddShoppingCartIcon/></span>
+            <span onClick={()=>navigate('/cartitems')} className='navcartcount'>5</span>
+                  <span  onClick={()=>navigate('/cartitems')}  className="navcartbutton">   <AddShoppingCartIcon/></span>
             
       
              <div  className="navbutton"><i class="fa-solid fa-magnifying-glass"></i>

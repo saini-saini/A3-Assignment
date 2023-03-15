@@ -4,7 +4,7 @@ import './Homepage.css'
 import Rating from "@mui/material/Rating";
 import  Button from  "@mui/material/Button";
 const baseURL = "https://fakestoreapi.com/products";
-function Homepage() {
+function Homepage(Props) {
   const [card, setCards]=useState([]);
   useEffect(()=>{
     Axios.get(baseURL).then((result) => {
@@ -13,16 +13,27 @@ function Homepage() {
       
     
   })
+  const userData = JSON.parse(localStorage.getItem('userInfo'))
+  const [isLoggedIn, setIsLoggedIn] = useState(userData);
+  const AddItems=(e)=>{
+    e.preventDefault();
+    if (isLoggedIn ==userData ) {
+      console.log('items added to cart');
+    } else  {
+      console.log('Please login to continue');
+    }
+  }
   return (
     
       <>
-      <div className="grid " >
+      <div className="grid  " >
         {card.map((items)=>{
           let{id,title,price,description,category,image}=items;
 
           description = description.length>50 ?description.substring(0,40) +"..."  : description
           title = title.length>20? title.substring(0,20)+"...": title
           return(
+        
             <div className='cards  '  key={id} >
                 <h2 className='title'> <b> {title}</b> </h2> <hr />
 
@@ -36,10 +47,11 @@ function Homepage() {
               <p className='description '>  {description}  </p>
                <div className='rating'><Rating name="size-medium" defaultValue={2} /></div>
              
-              <div className='button d-grid mt-1'> <Button variant="contained">Add to Cart</Button>  </div>
+              <div className='button d-grid mt-1'> <Button name='AddToCart' variant="contained" onClick={AddItems} disable={isLoggedIn ? "true" : "false"} >Add to Cart</Button>  </div>
              
               
             </div>
+         
           )
         })
       
@@ -51,3 +63,6 @@ function Homepage() {
 }
 
 export default Homepage
+
+
+// onClick={AddItems} disable={isLoggedIn ? "userData" : "false"}

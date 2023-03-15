@@ -2,9 +2,10 @@
     margin-left: 161px;
 }
 .form{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     display: flex;
     margin-left: 230px;
+   
 }
 
 .TermAndConditions{
@@ -27,17 +28,20 @@ width: 285px;
 }
 
 .create{
-    background-color: rgb(238, 76, 103);
+    background-color: rgb(4, 125, 200);
     color: white;
     margin-left:200px;
     width: 410px;
     height: 40px;
-    border-color:  rgb(238, 76, 103);
+    border-color: rgb(4, 125, 200);
     border-radius: 7px;
 }
 .box{
     background-color: rgba(183, 179, 179, 0.237);
-    border: none;
+    border: solid;
+    border-color: white;
+    border-radius: 7px;
+    background-color: white;
 }
 .passbox{
     width: 405px;
@@ -53,6 +57,7 @@ width: 285px;
 
 .namebox{
     height: 35px;
+    background-color: white;
 }
 .value{
     margin-left: -95px;
@@ -70,6 +75,9 @@ width: 285px;
 
 }
 
-.items{
-    margin-right: 20px;
+.signupform{
+  
+    background-image: url("./backimg.jpg");
+    height: 529px;
 }
+

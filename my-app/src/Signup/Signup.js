@@ -29,8 +29,9 @@ function Signup() {
  
       }}
       >
+         <div className="signupform">
         <Form className='form'>
-          
+         
        <div className="items">
        <h3 className='heading'>Sign up to Dribbble</h3> <br />
        <div  className="names">
@@ -61,7 +62,9 @@ function Signup() {
         </div> */}
          </div>
          <ToastContainer/>
+        
         </Form>
+        </div>
       </Formik>
     </div>
   )

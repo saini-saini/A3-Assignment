@@ -17,7 +17,7 @@ import 'react-toastify/dist/ReactToastify.css';
     const handleSubmit = (values) => {
 
       const userData = JSON.parse(localStorage.getItem('userInfo'))
-      if(userData.email == values.email && userData.password == values.password){
+      if(userData.email == values.email && userData.password == values.password ) {
         console.log('login successfull')
         navigate('/home')
         toast.success("Login Successfull",{
@@ -44,7 +44,8 @@ import 'react-toastify/dist/ReactToastify.css';
       onSubmit={handleSubmit}>
         <Form>
     
-<div>
+<div className='loginform'>
+  
 <h3 className='heading '>Sign in to Dribbble</h3> <br />
 <span className="content">
 
@@ -59,9 +60,9 @@ import 'react-toastify/dist/ReactToastify.css';
          <LoginRedErrorMessage name='password'/> <br />
          </div>
          <div > <button  className='login ' type='submit '>Log in</button>
-        </div>
+        </div> <br />
         <div > <button className='ForgetPass' type='submit '>Forget Password?</button>
-        <br /> </div> 
+        <br /> </div>  <br />
         <div > <button onClick={()=>navigate('/signup')} className='createAccount ' type='submit '>Create New Account</button>
         <br /> <br /></div>
         
