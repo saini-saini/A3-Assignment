@@ -27,15 +27,10 @@ function Homepage(Props) {
   const [Items, setItems] = useState(userData);
   const data = useSelector((state)=>state.cartReducer)
   const AddItems=(items)=>{
-    //e.preventDefault();
     if (userData ) {
-      console.log(card);
-    
       dispatch(cartActions(items))
       //console.log(data)
      // console.log(items)
-     
-
     } else  {
       navigate('/signin')
         console.log('Please login to continue');

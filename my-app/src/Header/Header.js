@@ -3,11 +3,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Header.css'
-import { useNavigate } from 'react-router-dom'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { useNavigate } from "react-router-dom";
 
 function Header() {
-  // const navigate =useNavigate();
+  const navigate = useNavigate();
+  
   return (
     <div className="navbar">
     <Navbar bg="light" expand="lg">
@@ -18,7 +19,6 @@ function Header() {
           <Nav className="me-auto">
             <img  className='logo' src="assets/asset 30.svg" alt="" />
             <Nav.Link href="#home"
-            //  onClick={()=>navigate('/')}
              >Home</Nav.Link>
             <Nav.Link href="#link">Find Work</Nav.Link>
             <Nav.Link href="#link">Learn Design </Nav.Link>
@@ -26,22 +26,22 @@ function Header() {
             <Nav.Link href="#link">Design Files</Nav.Link>
             <Nav.Link className='hiredesign' href="#link">Hire Designers</Nav.Link>
             <span 
-            // onClick={()=>navigate('/cartitems')}
+           onClick={()=>navigate('/cartitems')}
              className='navcartcount'>0</span>
                   <span  
                   // onClick={()=>navigate('/cartitems')}
                     className="navcartbutton">   <AddShoppingCartIcon/></span>
             
       
-             <div  className="navbutton"><i class="fa-solid fa-magnifying-glass"></i>
+             <div  className="navbutton"><i className="fa-solid fa-magnifying-glass"></i>
 
 <a 
 // onClick={()=>navigate('/signin')}
- class="btn signin"    href="#">Sign in</a>
+ className="btn signin"    href="#">Sign in</a>
 
 <button 
 // onClick={()=>navigate('/signup')}
- class=" btn-outline-success signup  " type="submit">Sign up</button>
+ className=" btn-outline-success signup  " type="submit">Sign up</button>
 </div>
 
           </Nav>
