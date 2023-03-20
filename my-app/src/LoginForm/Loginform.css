@@ -33,18 +33,19 @@
 }
 
 .loginform{
-margin-top: -1px;
+margin-top: -20px;
   margin-left: -73px;
  background-image: url("./bgimg.jpg");
- height: 530px; 
+ height: 601px; 
  
 
 }
 
 .loginUI{
-  border: solid;
-  margin-left: 351px;
-  width: 733px;
+  /* border: solid; */
+  /* margin-left: 351px; */
+  /* width: 733px; */
+  width: 100%;
   height: 500px;
   border-color: white;
 
@@ -58,3 +59,9 @@ margin-top: -1px;
 .loginheading{
   margin-top: 20px;
 }
+.formlogo{
+  /* margin-left: 20px; */
+  width: 90px;
+}
+
+

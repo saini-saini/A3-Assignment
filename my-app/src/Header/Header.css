@@ -1,53 +1,59 @@
-
-.navbutton{
-    /* margin-left: -40px; */
+.navbutton {
+    margin-top: -41px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     position: absolute;
     right: 1%;
-  
-  }
-  .fa-solid{
-      margin-top: 17px;
-      margin-right: -85px;
-  }
-  .navbar{
-      width: 100%;
-      background-color:rgb(59, 166, 232);
-     
-  }
-  .btn-outline-success {
-      background-color: rgb(4, 125, 200);
-      color: white;
-      width: 80px;
-      height: 40px;
-      border-radius: 8px;
-      border-color:rgb(4, 125, 200);
-  }
-  .btn-outline-success :hover{
-      background-color: red;
-  }
-  
-  .logo{
-      margin-left: -70px;
-      
-      
-  }
-  
-  .navcartbutton{
-      margin-top: 13px;
-      margin-left: 268px;
-      position: absolute;
-      right: 21%;
-      
-  }
-   
-  .hiredesign{
-      margin-right: 16px;
-  }
 
- .navcartcount{
+}
+
+.fa-solid {
+    margin-top: 17px;
+    margin-right: -85px;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgb(59, 166, 232);
+    
+
+}
+
+.btn-outline-success {
+    background-color: rgb(4, 125, 200);
+    color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    border-color: rgb(4, 125, 200);
+  
+}
+
+
+
+
+.logo {
+    margin-left: -63px;
+    width: 87px;
+    height: 45px;
+    margin-right: 11px;
+
+}
+
+.navcartbutton {
+    margin-top: 13px;
+    margin-left: 268px;
+    position: absolute;
+    right: 21%;
+
+}
+
+.hiredesign {
+    margin-right: 16px;
+}
+
+.navcartcount {
     position: absolute;
     right: 299px;
     z-index: 1;
@@ -60,11 +66,31 @@
     color: white;
     right: 20%;
     cursor: pointer;
- }
+}
 
 
 
- .signup:hover{
-background-color: rgb(64, 168, 234);
-border-color:rgb(4, 125, 200) ;
- }
+.signup:hover {
+    background-color: rgb(64, 168, 234);
+    border-color: rgb(4, 125, 200);
+}
+
+
+.navcartbutton{
+ margin-right: -65px;
+margin-top: 9px;}
+ 
+
+.searchbox{
+    margin-left: 59px;
+    margin-top: 2px;
+    width: 233px;
+}
+
+
+.searchbtn:hover{
+    background-color: rgb(64, 168, 234);
+    border-color: rgb(4, 125, 200);
+}
+
+

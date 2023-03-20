@@ -6,7 +6,7 @@
     /* margin-top: 20px; */
     display: flex;
     margin-left: 230px;
-    border: solid;
+    /* border: solid; */
     width: 800px;
     border-color: white;
    
@@ -82,7 +82,7 @@ width: 285px;
 .signupform{
   
     background-image: url("./bgimg.jpg");
-    height: 529px;
+    height: 601px;
 }
 
 .haveAccount{
