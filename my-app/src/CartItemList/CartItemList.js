@@ -11,7 +11,7 @@ function CartItemList() {
   const data = useSelector((state) => state.cartReducer)
   const dispatch = useDispatch()
   let total = 0
-  let GST = '18%'
+ 
   const products = useSelector((state) => state.cartReducer)
   console.log(products)
   console.log(data)
