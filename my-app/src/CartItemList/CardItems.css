@@ -1,0 +1,42 @@
+.cardsItems{
+    display: grid;
+    grid-template-columns:repeat(4,1fr) ;
+    margin-top: 40px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+   
+
+
+.cardItemImg{
+   height: 100px;
+}
+
+.cardsItemsittle{
+    font-size: 15px;
+}
+
+.cardsItemsDescription{
+    text-align: start;
+}
+
+
+.TotalAmount{
+       height: 57px;
+    border: solid;
+    border-width: 1px;
+    width: 175px;
+   border-color: black;
+    background-color: rgb(4, 125, 200);
+    color: black;
+    float: right;
+    margin-right: 60px;
+    margin-top: 5px;
+    cursor: pointer;
+} 
+
+
+.amount{
+    color: white;
+}

@@ -4,3 +4,10 @@ export const cartActions=(product)=>{
         payload:product
     }
 }
+
+export const removeCartAction = (id) => {
+    return {
+        type:'Remove_from_cart',
+        payload:id
+    }
+}

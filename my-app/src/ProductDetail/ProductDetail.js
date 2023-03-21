@@ -11,7 +11,7 @@ function ProductDetail() {
     const navigate = useNavigate();
   return (
     <div className='singleCard'>
-       <div className='CardImg'> <img className='SingleCardImg' src={product.image} alt="" /></div>
+       <div className='CardImg'> <img className='SingleCardImg' src={product.images[0]} alt="" /></div>
        <div className="SingleCardDetails">
       <h2 className='SingleCardTitle'>{product.title}</h2><hr />
      

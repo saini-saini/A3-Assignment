@@ -7,27 +7,20 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { cartActions } from '../redux/actions/actions';
 import FormatPrice from './FormatPrice'
-// import ScaleLoader from "react-spinners/ScaleLoader";
-
 import { RotatingLines } from  'react-loader-spinner'
-const baseURL = "https://fakestoreapi.com/products";
+import CartItemList from '../CartItemList/CartItemList';
+// const baseURL = "https://fakestoreapi.com/products";
+const baseURL = "https://dummyjson.com/products";
 
 function Homepage(Props) {
   const [card, setCards] = useState([]);
 
   const [loading,setLoading] = useState(true);
-
-//   useEffect(()=>{
-//     setLoading(true)
-//     setTimeout(()=>{
-// setLoading(false)
-//     },5000);
-//   })
-
   const dispatch = useDispatch()
   useEffect(() => {
     Axios.get(baseURL).then((result) => {
-      setCards(result.data);
+     // console.log(result.data.products)
+      setCards(result.data.products);
       setLoading(false);
     }, []);
 
@@ -56,6 +49,10 @@ function Homepage(Props) {
 
 
 
+
+
+
+
   return (
 
     <>
@@ -70,30 +67,31 @@ function Homepage(Props) {
       <div className="grid  " >
 
       {card.map((items) => {
-        let { id, title, price, description, category, image } = items;
-
+      //  let { id, title, price, description, category, image } = items;
+let {id,title,description,price,discountPercentage,brand,category,images} = items;
         description = description.length > 50 ? description.substring(0, 40) + "..." : description
         title = title.length > 20 ? title.substring(0, 20) + "..." : title
         return (
 
           <div className='cards  ' key={id} >
-            <h2 className='title'> <b> {title}</b> </h2> <hr />
+            <h2    onClick={() => {
+              navigate(`/ProductDetail/${id}`,{state:items})
+            }}  className='title'> <b> {title}</b> </h2> <hr />
 
             <span onClick={() => {
               navigate(`/ProductDetail/${id}`,{state:items})
             }
-            } className="img"   ><img className='cardimg' src={image} alt="" /></span>
-
-
-
+            } className="img"   ><img className='cardimg' src={images[0]} alt="error" /></span>
             <p className='price'> <b> {<FormatPrice price={price} />} </b></p>
             <p className='category'> <b>{category} </b> </p>
 
             <p className='description '>  {description}  </p>
             <div className='Allrating'><Rating name="size-medium" defaultValue={2} /></div>
+ <div className='button d-grid mt-1'> <Button name='buttonAddToCart' variant="contained" onClick={() => AddItems(items)} disable={Items ? "userData" : "false"} >Add to Cart</Button>  </div>
 
-            <div className='button d-grid mt-1'> <Button name='buttonAddToCart' variant="contained" onClick={() => AddItems(items)} disable={Items ? "userData" : "false"} >Add to Cart</Button>  </div>
-
+{/* <div className='discountPercentage'> {discountPercentage}</div> */}
+{/* <div className="stock">{stock}</div> */}
+{/* <div className="brand">{brand}</div> */}
 
           </div>
 

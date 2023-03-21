@@ -19,12 +19,13 @@ function Header() {
               <div>
               <img className='logo' src=" images/Shopify.png" alt="" /></div>
               
-              <Nav.Link  href="#home" onClick={() => navigate('/home')} >  Home  </Nav.Link>
-              <Nav.Link href="#link">Contact us</Nav.Link>
-              <Nav.Link href="#link"> Men's</Nav.Link>
-              <Nav.Link href="#link">Women's</Nav.Link>
+              <Nav.Link  href="#home" onClick={() => navigate('/')} >  Home  </Nav.Link>
+              <Nav.Link href="#link"> About</Nav.Link>
+              <Nav.Link href="#link">Contact</Nav.Link>
+             
+              {/* <Nav.Link href="#link">Women's</Nav.Link>
               <Nav.Link href="#link">Electronics</Nav.Link>
-              <Nav.Link className='hiredesign' href="#link">Jewelery</Nav.Link> 
+              <Nav.Link className='hiredesign' href="#link">Jewelery</Nav.Link>  */}
               {/* <span  */}
               {/* // onClick={() => navigate('/cartitems')} className='navcartcount'>0</span> */}
               <div>
